@@ -8,6 +8,6 @@ Scenario: User able to successfully login to Orange HRM site
 	And user click on the login button 
 	Then user navigate to the welcome page 
 	And user verify the page title as "OrangeHRM" 
-	#	And user verify username is displays at top right
+	And user verify username is displays at top right 
 	Then user logout 
 	And user close browser

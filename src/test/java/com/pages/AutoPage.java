@@ -14,7 +14,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class AutoPage {
-	static String SecondPrice;
+	public static String SecondPrice;
+	WebDriver driver;
 
 	public AutoPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -42,14 +43,26 @@ public class AutoPage {
 	@FindBy(how = How.XPATH,using = "//*[@class='product-desc']/following-sibling::div[1]")
 	private static List<WebElement> AllPrices;
 	
-//	@FindBy(how = How.XPATH,using = "(//*[contains(text(),'"+SecondPrice+"')])[2]")
-//	private static WebElement SecondItem;
 	
+	
+	//@FindBy(how = How.XPATH,using = "(//*[contains(text(),'"+SecondPrice+"')])[2]")
+	//private static WebElement SecondItem;
+	
+	public static List<WebElement> getAllPrices() {
+		return AllPrices;
+	}
+
+	public static void setAllPrices(List<WebElement> allPrices) {
+		AllPrices = allPrices;
+	}
 	@FindBy(how = How.XPATH,using = "//*[contains(text(),'Proceed to checkout')]")
-	private static WebElement AddToCart;
+	private static WebElement Checkout;
 	
 	@FindBy(how = How.XPATH,using = "//*[@id='total_price']")
-	private static WebElement verify;
+	private static WebElement Verify;
+	
+	@FindBy(how = How.XPATH,using = "//*[@class='logout']")
+	private static WebElement Signout;
 	
 	
 	public void clickOnTheSignInButton() {
@@ -92,19 +105,14 @@ public class AutoPage {
 		}
 		Collections.sort(NewList, Collections.reverseOrder());
 		System.out.println("List of prices in sorted order: "+NewList);
-		String SecondPrice = NewList.get(1);
+		SecondPrice = NewList.get(1);
 		System.out.println("Price of the second dress" +SecondPrice);
 	}
 
-	public void selectTheSecondDress() {
-		//SecondItem.click();
+	
 
-		
-		
-	}
-
-	public void clickOnAddToCart() {
-		AddToCart.click();
+	public void proceedToCheckOutButton() {
+		Checkout.click();	
 		
 	}
 
@@ -112,6 +120,18 @@ public class AutoPage {
 		
 		
 	}
+
+	public void signOut() {
+		Signout.click();
+		
+	}
+
+	public void closeTheWindow() {
+		
+		
+	}
+
+
 
 
 

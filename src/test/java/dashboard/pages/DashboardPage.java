@@ -50,7 +50,7 @@ public class DashboardPage {
 	}
 
 	public void verifyUsername() {
-		String expected = "Paul";
+		String expected = "Welcome";
 		String actual = welcomeWord.getText().trim();
 		Assert.assertTrue("Word does not match", actual.contains(expected));
 		
