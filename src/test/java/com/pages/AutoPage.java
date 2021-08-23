@@ -5,8 +5,6 @@ import java.util.Collections;
 import java.util.List;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -43,9 +41,6 @@ public class AutoPage {
 	@FindBy(how = How.XPATH, using = "//*[@class='product-desc']/following-sibling::div[1]")
 	private static List<WebElement> AllPrices;
 
-	// @FindBy(how = How.XPATH,using =
-	// "(//*[contains(text(),'"+SecondPrice+"')])[2]")
-	// private static WebElement SecondItem;
 
 	public static List<WebElement> getAllPrices() {
 		return AllPrices;
@@ -107,11 +102,7 @@ public class AutoPage {
 	public void selectSecondDressFromList() {
 		
 	System.out.println("Price of the second dress" + SecondPrice);
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("window.scrollBy(0,1600)");
-//		
-//		driver.findElement(By.xpath("(//*[contains(text(),'" + SecondPrice + "')])[2]")).click();
-//		
+	
 	}
 	public void proceedToCheckOutButton() {
 		Checkout.click();
