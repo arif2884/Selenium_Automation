@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -101,9 +103,16 @@ public class AutoPage {
 		Collections.sort(NewList, Collections.reverseOrder());
 		System.out.println("List of prices in sorted order: " + NewList);
 		SecondPrice = NewList.get(1);
-		System.out.println("Price of the second dress" + SecondPrice);
 	}
-
+	public void selectSecondDressFromList() {
+		
+	System.out.println("Price of the second dress" + SecondPrice);
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("window.scrollBy(0,1600)");
+//		
+//		driver.findElement(By.xpath("(//*[contains(text(),'" + SecondPrice + "')])[2]")).click();
+//		
+	}
 	public void proceedToCheckOutButton() {
 		Checkout.click();
 
@@ -120,7 +129,9 @@ public class AutoPage {
 	}
 
 	public void closeTheWindow() {
-
+		
 	}
+
+
 
 }
