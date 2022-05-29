@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sample Test Suite" verbose="1" >
+  <test name="Method Test Cases" >
+    <classes>
+       <class name="com.easy.entry.AddTestCase">
+        <methods>
+        <include name="addDepartmentTestCase" />
+      </methods>
+       </class>
+    </classes>
+  </test>
+    <packages>
+      <package name="com.test.firstpackage"/>
+      <package name="com.test.secondpackage"/>
+      <package name="com.test.thirdpackage"/>
+    </packages>
+</suite>
