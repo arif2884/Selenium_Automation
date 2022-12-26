@@ -12,7 +12,7 @@ public class Abc {
 			int b=salary;
 			int c=money;
 		System.out.println(b);
-		System.out.println(c);
+//		System.out.println(c);
 
 		}
 //=====================================================================

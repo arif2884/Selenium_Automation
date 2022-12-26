@@ -1,5 +1,6 @@
 package com.collections;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -20,8 +21,8 @@ public class DragAndDrop {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);							
-				wait.withTimeout(30, TimeUnit.SECONDS); 			
-				wait.pollingEvery(5, TimeUnit.SECONDS) ;			
+				wait.withTimeout(Duration.ofSeconds(30)); 			
+				wait.pollingEvery(Duration.ofSeconds(5)) ;			
 				wait.ignoring(NoSuchElementException.class);
 		driver.get("https://demo.guru99.com/test/drag_drop.html");
 		

@@ -23,14 +23,14 @@ public class SeleniumWait {
 		driver.get("");
 		
 		 //Explicit wait
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("")));
 		
 		// Implicit wait
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		//Page properly loaded or not
-		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
 		
 		//Fluent wait
 	     FluentWait<WebDriver> wait1 = new FluentWait<>(driver);

@@ -21,7 +21,7 @@ public class SelnmProxy {
 // Pass proxy object p
 		cap.setCapability(CapabilityType.PROXY, p);
 		// Open firefox browser
-		WebDriver driver = new FirefoxDriver(cap);
+		WebDriver driver = new FirefoxDriver();
 // from here onwards code will be same as normal script
 
 	}
