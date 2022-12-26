@@ -8,8 +8,8 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "Features",
-		glue= {"steps"},
-		tags = {"@Sanity","~@smokeTest"},
+		glue= "steps",
+		tags = "@ORG-101",
 		plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
 		monochrome = true
 		)
